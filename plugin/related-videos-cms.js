@@ -1,51 +1,5 @@
-<!doctype html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <title>Related Videos with the CMS API</title>
-
-  <!-- styles for the overlay plugin -->
-  <link href="//players.brightcove.net/videojs-overlay/2/videojs-overlay.css" rel="stylesheet">
-
-  <style>
-    /* styles for the video thumbnails */
-    .video-thumbnail {
-      margin: 0;
-      padding: 0;
-      width: 190px;
-      height: 107px;
-      cursor: pointer;
-    }
-    /* override some of the default overlay styling */
-    .video-js .vjs-overlay {
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- player embed code with an added id attribute -->
-  <video id="myPlayerID"
-    data-video-id="5701202551001"
-    data-account="1752604059001"
-    data-player="B1GdCQdQBM"
-    data-embed="default"
-    data-application-id
-    class="video-js"
-    controls width="640" height="360">
-  </video>
-  <script src="//players.brightcove.net/1752604059001/B1GdCQdQBM_default/index.min.js"></script>
-
-  <!-- script for the overlay plugin -->
-  <script src="//players.brightcove.net/videojs-overlay/2/videojs-overlay.min.js"></script>
-
-  <!-- custom script -->
-  <script type="text/javascript">
-    var myPlayer,
+videojs.registerPlugin('relatedVideosCMS', function() {
+    var myPlayer = this,
       requestData,
       apiRequest,
       proxyURL = 'https://solutions.brightcove.com/bcls/bcls-proxy/doc-samples-proxy.php',
@@ -225,7 +179,7 @@
         }]
       });
     }
-    
+
     /**
      * loads and plays a video
      * this function called when thumbnails in the overlay are clicked
@@ -242,7 +196,5 @@
         myPlayer.play();
       });
     }
-  </script>
-</body>
 
-</html>
+});

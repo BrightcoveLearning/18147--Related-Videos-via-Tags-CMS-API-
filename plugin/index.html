@@ -3,13 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Untitled Document</title>
+  <title>Related Videos with the CMS API</title>
+  <link href="related-videos-cms.css" rel="stylesheet">
 </head>
 
 <body>
+  <!-- player embed code with an added id attribute -->
+  <video id="myPlayerID"
+    data-video-id="5701202551001"
+    data-account="1752604059001"
+    data-player="B1GdCQdQBM"
+    data-embed="default"
+    data-application-id
+    class="video-js"
+    controls width="640" height="360">
+  </video>
 
+  <script src="//players.brightcove.net/1752604059001/B1GdCQdQBM_default/index.min.js"></script>
 
+  <!-- script for the overlay plugin -->
+  <script src="//players.brightcove.net/videojs-overlay/2/videojs-overlay.min.js"></script>
 
+  <!-- custom script -->
+  <script type="text/javascript" src="related-videos-cms.js"></script>
+  <script>
+    videojs('myPlayerID').relatedVideosCMS();
+  </script>
 </body>
 
 </html>

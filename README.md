@@ -23,11 +23,11 @@ For more information about this sample see: https://support.brightcove.com/brigh
     </tr>
     <tr>
       <td>plugin/plugin-name.js</td>
-      <td>The JavaScript for the plugin. An example, actual filename could be <strong>related-videos.js</strong>.</td>
+      <td>The JavaScript for the plugin. An example, actual filename could be <strong>related-videos-cms.js</strong>.</td>
     </tr>
     <tr>
       <td>plugin/plugin-name.css</td>
-      <td>The CSS for the plugin. An example, actual filename could be <strong>related-videos.css</strong>.</td>
+      <td>The CSS for the plugin. An example, actual filename could be <strong>related-videos-cms.css</strong>.</td>
     </tr>
   </tbody>
 </table>
