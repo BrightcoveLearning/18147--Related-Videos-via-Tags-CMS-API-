@@ -9,7 +9,7 @@
   <link href="https://players.brightcove.net/videojs-overlay/2/videojs-overlay.css" rel="stylesheet">
 
   <style>
-  /* styles for the video thumbnails */
+    /* styles for the video thumbnails */
     .video-thumbnail {
       margin: 0;
       padding: 0;
@@ -53,7 +53,7 @@
       options.proxyURL = "https://solutions.brightcove.com/bcls/bcls-proxy/brightcove-learning-proxy-v2.php";
       options.requestType = "GET";
 
-      videojs("myPlayerID").one('loadedmetadata', function(){
+      videojs.getPlayer('myPlayerID').one('loadedmetadata', function(){
           myPlayer = this;
           // set up data for CMS API request
           setRequestData();
